@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toku_app/components/category_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,53 +14,10 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.only(left: 24),
-            alignment: Alignment.centerLeft,
-            width: double.infinity,
-            height: 65,
-            color: Color(0xffEF9235),
-            child: Text(
-              'Numbers',
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            ),
-          ),
-
-          Container(
-            padding: EdgeInsets.only(left: 24),
-            alignment: Alignment.centerLeft,
-            width: double.infinity,
-            height: 65,
-            color: Color(0xff558B37),
-            child: Text(
-              'Family Members',
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            ),
-          ),
-
-          Container(
-            padding: EdgeInsets.only(left: 24),
-            alignment: Alignment.centerLeft,
-            width: double.infinity,
-            height: 65,
-            color: Color(0xff79459F),
-            child: Text(
-              'Colors',
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            ),
-          ),
-
-          Container(
-            padding: EdgeInsets.only(left: 24),
-            alignment: Alignment.centerLeft,
-            width: double.infinity,
-            height: 65,
-            color: Color(0xff50ADC7),
-            child: Text(
-              'Phrases',
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            ),
-          ),
+          Category(text: 'Numbers', color: Color(0xffEF9235)),
+          Category(text: 'Family Members', color: Color(0xff558B37)),
+          Category(text: 'Colors', color: Color(0xff79459F)),
+          Category(text: 'Phrases', color: Color(0xff50ADC7)),
         ],
       ),
     );
